@@ -1,4 +1,4 @@
-FROM ruby:3.2.2
+FROM ruby:3.3.5
 
 # Instalar dependências
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
@@ -15,7 +15,7 @@ COPY . .
 
 # Crie diretórios necessários e ajuste permissões
 RUN mkdir -p tmp/pids tmp/sockets tmp/cache log public/uploads
-RUN chmod -R 777 tmp log public/uploads
+RUN chown -R 1000:1000 tmp log public/uploads && chmod -R 777 tmp log public/uploads
 
 # Expor porta
 EXPOSE 3000

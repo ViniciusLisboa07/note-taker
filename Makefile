@@ -8,8 +8,8 @@ down:
 	docker compose down
 
 bash:
-	docker compose exec app bash
+	docker compose exec web bash
 
 console:
-	docker compose exec app rails console
+	docker compose exec web rails console
 
