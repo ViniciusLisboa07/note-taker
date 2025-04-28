@@ -33,12 +33,16 @@ gem "rswag"
 
 # API authentication
 gem "devise"
+gem "devise-jwt"
+gem "jsonapi-serializer"
 
 # GraphQL
 gem "graphql"
 
 # GraphQL Playground
 gem 'graphiql-rails', group: :development
+
+gem 'rack-cors'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
