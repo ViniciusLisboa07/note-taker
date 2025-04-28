@@ -27,5 +27,10 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :notes, [Types::NoteType], null: false, description: "List all notes for the current user"
+    def notes
+      Note.all
+    end
   end
 end
